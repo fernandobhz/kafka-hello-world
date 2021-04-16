@@ -1,0 +1,23 @@
+{
+  "name": "kafka-hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:zookeeper": "c:\\kafka\\bin\\windows\\zookeeper-server-start.bat c:\\kafka\\config\\zookeeper.properties",
+    "start:kafka": "c:\\kafka\\bin\\windows\\kafka-server-start.bat c:\\kafka\\config\\server.properties",
+    "start:producer": "c:\\kafka\\bin\\windows\\kafka-console-producer.bat --topic quickstart-events --bootstrap-server localhost:9092",
+    "start:consumer": "c:\\kafka\\bin\\windows\\kafka-console-consumer.bat --topic quickstart-events --from-beginning --bootstrap-server localhost:9092",
+    "create:kafka-topic": "c:\\kafka\\bin\\windows\\kafka-topics.bat --create --topic quickstart-events --bootstrap-server localhost:9092",
+    "clean:kafka-data": "rm -rf c:\\tmp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "kafka-node": "^5.0.0",
+    "kafkajs": "^1.15.0"
+  }
+}
